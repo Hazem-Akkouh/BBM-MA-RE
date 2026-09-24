@@ -1,4 +1,4 @@
-> **Note:** This Markdown version renders imperfectly on GitHub (tables, PlantUML diagrams, and code blocks can display messily depending on viewer). For the best reading experience, **view the original PDF** here: **[BBM_Malware_Analysis_%26%26_RE.pdf]**
+> **Note:** This Markdown version renders imperfectly on GitHub (tables, PlantUML diagrams, and code blocks can display messily depending on viewer). For the best reading experience, **view the original PDF** [here](./BBM_Malware_Analysis_%26%26_RE.pdf).
 >
 > 
 **Reverse Engineering** && **Malware Analysis Report**
