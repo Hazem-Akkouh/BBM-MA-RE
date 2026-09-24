@@ -4,7 +4,7 @@ A byte-level static analysis of the malware toolkit used in the February 2016 Ba
 
 **54 pages · 31 findings not present in prior public reporting (BAE 2016, DOJ 2018, Oosthoek & Doerr 2021 ...), each grounded in a specific binary address.**
 
-📄 **[Read the full report → REPORT.md](./BBM_MA_RE.md)**
+📄 **[Read the full report → REPORT.md](./BBM_MA_RE.pdf)**
 
 ## What's in the report
 
