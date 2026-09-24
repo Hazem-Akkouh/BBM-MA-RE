@@ -1,10 +1,11 @@
-**Reverse Engineering**
-
-**Malware Analysis Report**
+> **Note:** This Markdown version renders imperfectly on GitHub (tables, PlantUML diagrams, and code blocks can display messily depending on viewer). For the best reading experience, **view the original PDF** here: **[PDF link]**
+>
+> 
+**Reverse Engineering** && **Malware Analysis Report**
 
 *Bangladesh Bank 2016 Heist Toolkit*
 
-<img src="media/image1.jpeg" style="width:2.35208in;height:2.32431in" alt="Virements SWIFT | Barid Bank" /> <img src="media/image2.png" style="width:2.42639in;height:2.33829in" alt="Ghidra : l&#39;outil de reverse engineering de la NSA · matteyeux" />
+ <img src="media/image2.png" style="width:3in;height:3in" alt="Ghidra : l&#39;outil de reverse engineering de la NSA · matteyeux" />
 
 **Sample: evtdiag.exe (primary) · evtsys.exe · nroff_b.exe · gpca.dat**
 
@@ -2084,7 +2085,7 @@ The 16-byte sequence below appears verbatim in two separate binaries:
 
 | **Binary**  | **Address**      | **XREFs from executable code**                        |
 |-------------|------------------|-------------------------------------------------------|
-| evtdiag.exe | .data:0x40F0200  | 1 : **FUN_004013b0:0x4013ee** (the config loader)     |
+| evtdiag.exe | .data:0x40F020 | 1 : **FUN_004013b0:0x4013ee** (the config loader)     |
 | evtsys.exe  | .data:0x00403010 | 0 : the key sits in **.data** with no code references |
 
 **FINDING :** The key is **used** in **evtdiag** (to decrypt **gpca.dat**) and **vestigial** in evtsys (present in the binary but unreferenced by any function). The most natural explanation: both were compiled from a shared source tree that included a common cryptography module. The key constant was included via a shared header file or **.c** module that **evtsys** links but does not call. This is a stronger attribution signal than merely "**same algorithm**", it is literally the same key bytes at a named **.data** symbol in two separate PE files.
